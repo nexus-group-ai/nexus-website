@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Same head content as index.html -->
-</head>
-<body>
-    <!-- Same nav content as index.html -->
+---
+layout: default
+title: "Contact Us"
+---
 
-    <section class="content">
-        <div class="container">
-            <h1 data-aos="fade-up">Contact Us</h1>
-            <p data-aos="fade-up" data-aos-delay="200">We'd love to hear from you. Please reach out with any questions or inquiries.</p>
-            <!-- Contact Form -->
-            <form action="#" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="400">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <!-- Same footer content as index.html -->
-
-    <!-- AOS Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+<section class="content">
+    <div class="container">
+        <h1 data-aos="fade-up">Contact Us</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+            We'd love to hear from you. Please reach out with any questions or inquiries.
+        </p>
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="400">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
