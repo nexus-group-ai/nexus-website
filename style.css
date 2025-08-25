@@ -383,22 +383,29 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .footer-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer-links a {
     color: var(--color-text-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 400;
+    font-size: 0.9rem;
 }
 
 .footer-links a:hover {
     color: #00d4ff;
+    transform: translateY(-1px);
 }
 
 /* Privacy Policy Specific Styles */
@@ -531,6 +538,12 @@ body {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        gap: 1rem;
     }
     
     .retention-row {
@@ -814,9 +827,17 @@ h2 {
 /* --- Footer --- */
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
     text-align: center;
     color: var(--color-text-secondary);
+    background: rgba(31, 29, 54, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 /* --- About Page Styles --- */
@@ -1587,6 +1608,17 @@ footer {
     
     .timeline-date {
         margin-right: 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 }
 
