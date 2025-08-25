@@ -604,6 +604,10 @@ nav {
     color: var(--color-light-purple);
 }
 
+.nav-links a.active {
+    color: var(--color-light-purple);
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -615,7 +619,8 @@ nav {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
