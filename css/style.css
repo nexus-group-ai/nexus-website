@@ -63,13 +63,23 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav {
+nav, .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text);
@@ -77,9 +87,24 @@ nav {
     display: flex;
     align-items: center;
 }
+
 .logo img {
     height: 40px;
     margin-right: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: var(--color-text);
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 
@@ -477,6 +502,10 @@ footer p {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
     .main-headline {
         font-size: 2.5rem;
     }
@@ -751,6 +780,89 @@ footer p {
 
 .legal-links a:hover {
     color: var(--color-light-purple);
+}
+
+/* --- Products Page Styles --- */
+.products-overview {
+    padding: 4rem 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(134, 93, 255, 0.2);
+}
+
+.product-card.coming-soon {
+    opacity: 0.7;
+    position: relative;
+}
+
+.product-card.coming-soon::after {
+    content: "Coming Soon";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-light-purple);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-light-purple);
+}
+
+.product-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    margin-bottom: 2rem;
+}
+
+.product-description ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.product-description li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.product-description li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-light-purple);
+    font-weight: bold;
+}
+
+.product-cta {
+    text-align: center;
 }
 
 /* Company Page Styles */
@@ -1332,6 +1444,19 @@ footer p {
         float: none;
         display: block;
         margin: 0 auto 1rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .product-card {
+        padding: 2rem;
+    }
+    
+    .product-header h2 {
+        font-size: 2rem;
     }
 }
 
