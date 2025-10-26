@@ -3,29 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Group AI - AI-Powered Risk Intelligence Platform | IRIS</title>
-    <meta name="description" content="IRIS: AI-powered risk intelligence dashboard for critical decision-makers. Navigate uncertainty and ensure resilience with tailored, actionable risk mitigation strategies.">
-    <meta name="keywords" content="AI, risk intelligence, IRIS, critical infrastructure, risk management, OSINT, resilience, threat detection">
-    <meta name="author" content="Nexus Group AI">
+    <title>Nexus Group AI - AI-Powered Risk Intelligence Platform</title>
+    <meta name="description" content="IRIS: AI-powered risk intelligence dashboard for critical decision-makers. Navigate uncertainty and ensure resilience.">
+    <meta name="keywords" content="AI, risk intelligence, IRIS, critical infrastructure, risk management">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nexus-group.ai/">
-    <meta property="og:title" content="Nexus Group AI - AI-Powered Risk Intelligence Platform">
-    <meta property="og:description" content="IRIS: AI-powered risk intelligence dashboard for critical decision-makers. Navigate uncertainty and ensure resilience.">
-    <meta property="og:image" content="https://nexus-group.ai/logo_full.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nexus-group.ai/">
-    <meta property="twitter:title" content="Nexus Group AI - AI-Powered Risk Intelligence Platform">
-    <meta property="twitter:description" content="IRIS: AI-powered risk intelligence dashboard for critical decision-makers. Navigate uncertainty and ensure resilience.">
-    <meta property="twitter:image" content="https://nexus-group.ai/logo_full.png">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo_icon.png">
-    <link rel="apple-touch-icon" href="assets/images/logo_icon.png">
-    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,62 +15,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Nexus Group AI",
-        "url": "https://nexus-group.ai",
-        "logo": "https://nexus-group.ai/logo_full.png",
-        "description": "AI-powered risk intelligence platform providing IRIS dashboard for critical decision-makers to navigate uncertainty and ensure resilience.",
-        "foundingDate": "2025",
-        "founders": [
-            {
-                "@type": "Person",
-                "name": "Ioan-Andrei Cursaru",
-                "jobTitle": "Founder & CEO"
-            },
-            {
-                "@type": "Person", 
-                "name": "Orion Forowycz",
-                "jobTitle": "Founder & CTO"
-            }
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Bellegardegasse 25, Ap. 3",
-            "addressLocality": "Wien",
-            "postalCode": "1220",
-            "addressCountry": "AT"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+43-660-8066561",
-            "contactType": "customer service",
-            "email": "info@nexus-group.ai"
-        },
-        "sameAs": [
-            "https://www.linkedin.com/company/nexus-group-ai"
-        ]
-    }
-    </script>
+    <!-- Three.js for 3D background animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <!-- Background Gradient -->
-    <div id="bg-placeholder"></div>
+    <div class="background-gradient"></div>
 
-    <!-- Navigation -->
-    <div id="nav-placeholder"></div>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo_icon.png" alt="Nexus Group AI">
+                Nexus Group AI
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#iris">About IRIS</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero" class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <h1 class="main-headline">Navigate Uncertainty. Ensure Resilience.</h1>
-                <p class="sub-headline">
-                    IRIS: Your AI-powered risk intelligence dashboard for a secure and resilient future. We empower critical decision-makers with tailored, actionable risk mitigation strategies.
-                </p>
-                <a href="#features" class="cta-button">Discover IRIS</a>
+        <section id="hero">
+            <div id="hero-background" class="hero-background"></div>
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1 class="main-headline">Navigate Uncertainty. Ensure Resilience.</h1>
+                    <p class="sub-headline">
+                        IRIS: Your AI-powered risk intelligence dashboard for a secure and resilient future. We empower critical decision-makers with tailored, actionable risk mitigation strategies.
+                    </p>
+                    <a href="#features" class="cta-button">Discover IRIS</a>
+                </div>
             </div>
         </section>
 
@@ -171,50 +135,20 @@
             <div class="solutions-grid">
                 <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-building"></i>
-                    <h3>Explore by Industry</h3>
+                    <h3>Industry Solutions</h3>
                     <p>Access tailored solutions across diverse sectors, including corporate intelligence, finance, brand safety, and national security.</p>
-                    <a href="#" class="solution-link">Explore Industries</a>
                 </div>
                 
                 <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-user-tie"></i>
-                    <h3>Explore by Role</h3>
+                    <h3>Executive Solutions</h3>
                     <p>Discover customized leadership and executive team solutions which streamline your search for role-specific resources and expertise.</p>
-                    <a href="#" class="solution-link">Explore Roles</a>
                 </div>
                 
                 <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Explore by Risk Cases</h3>
-                    <p>Find precise solutions for wide-ranging challenges, such as brand reputation, cyber attacks, geopolitical risks, executive targeting, financial market crisis and more.</p>
-                    <a href="#" class="solution-link">Explore Risk Cases</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="partners" class="container">
-            <h2 data-aos="fade-up">Trusted by Leading Organizations</h2>
-            <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
-                Proud to be supported by leading industry partners and accelerators.
-            </p>
-            <div class="partners-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="partner-logo">
-                    <span>IMPACT.AI</span>
-                </div>
-                <div class="partner-logo">
-                    <span>AWS</span>
-                </div>
-                <div class="partner-logo">
-                    <span>ISTARI.AI</span>
-                </div>
-                <div class="partner-logo">
-                    <span>UNIDO</span>
-                </div>
-                <div class="partner-logo">
-                    <span>NVIDIA</span>
-                </div>
-                <div class="partner-logo">
-                    <span>Google Cloud</span>
+                    <h3>Risk Management</h3>
+                    <p>Find precise solutions for wide-ranging challenges, such as brand reputation, cyber attacks, geopolitical risks, and financial market crisis.</p>
                 </div>
             </div>
         </section>
@@ -244,19 +178,17 @@
             <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
                 Ready to transform your risk management strategy? Reach out to us.
             </p>
-            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
-                <p><i class="fas fa-envelope"></i> info@nexus-group.ai</p>
-                <p><i class="fas fa-phone"></i> +43 660 8066561</p>
-                <p><i class="fas fa-map-marker-alt"></i> Bellegardegasse 25, Ap. 3, 1220 Wien, Österreich</p>
-            </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexus Group AI. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/components.js"></script>
+    <script src="js/background-animation.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
